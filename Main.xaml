@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="852.8,2177.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="852.8,2060" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -81,7 +81,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,2112.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1995.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Text" />
       <Variable x:TypeArguments="x:String" Name="first_Name" />
@@ -93,16 +93,15 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="EmployeeDetails.txt" sap:VirtualizedContainerService.HintSize="449.6,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Sequence DisplayName="Sequence First Name" sap:VirtualizedContainerService.HintSize="449.6,960" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence First Name" sap:VirtualizedContainerService.HintSize="449.6,842.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="First Name:" SeparatorKey="Custom" TextToRight="[first_Name]" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[first_Name]" />
       <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[first_Name]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="Last Name: Doe" SeparatorKey="Custom" TextToLeft="[first_Name]" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[first_Name]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[first_Name.trim]" />
     </Sequence>
     <Sequence DisplayName="Sequence Last name" sap:VirtualizedContainerService.HintSize="449.6,842.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
@@ -112,7 +111,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_3" Separator="Last Name:" SeparatorKey="Custom" TextToRight="[last_Name]" />
       <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[last_Name]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_4" Separator="Age: 27" SeparatorKey="Custom" TextToLeft="[last_Name]" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[last_Name]" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[last_Name.Trim]" />
     </Sequence>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="449.6,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Hello Mr/Ms/Mrs&quot; + first_Name + &quot; &quot; + last_Name + &quot;, we would like to invite you to our product launch event next week. Please confirm by the end of current week.&quot;]" />
   </Sequence>
